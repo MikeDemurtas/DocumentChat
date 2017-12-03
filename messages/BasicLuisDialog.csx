@@ -36,6 +36,13 @@ public class BasicLuisDialog : LuisDialog<object>
         await context.PostAsync($"Hello, Welcome! I'm the Transport Management Chatbot, how can I help you?"); //
         context.Wait(MessageReceived);
     }
-    
+
+ [LuisIntent("givedocumentation")]
+    public async Task givedocumentationIntent(IDialogContext context, LuisResult result)
+    {
+        await context.PostAsync($"this is the link to the documentation"); //
+        context.Wait(MessageReceived);
+    }
     
 }
+
