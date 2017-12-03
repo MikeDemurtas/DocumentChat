@@ -26,14 +26,14 @@ public class BasicLuisDialog : LuisDialog<object>
     [LuisIntent("explain")]
     public async Task ExplainIntent(IDialogContext context, LuisResult result)
     {
-        await context.PostAsync($"I can Explain this: Booking acceptance rate card uses TM on-line data as its source, It is the Number of Bookings sent and accepted by the carrier last month/ Total number of bookings sent to carrier last month  * 100"); //
+        await context.PostAsync($"You have reached the explain intent. You said: {result.Query}"); //
         context.Wait(MessageReceived);
     }
     
     [LuisIntent("greetings")]
     public async Task GreetingsIntent(IDialogContext context, LuisResult result)
     {
-        await context.PostAsync($"Hello, Welcome! I'm the Transport Management Chatbot, how can I help you?"); //
+        await context.PostAsync($"You have reached the greetings intent. You said: {result.Query}"); //
         context.Wait(MessageReceived);
     }
     
