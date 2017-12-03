@@ -30,7 +30,7 @@ public class BasicLuisDialog : LuisDialog<object>
         context.Wait(MessageReceived);
     }
     
-    [LuisIntent("greetings")]
+	[LuisIntent("greetings")]
     public async Task GreetingsIntent(IDialogContext context, LuisResult result)
     {
         await context.PostAsync($"Hello, Welcome! I'm the Transport Management Chatbot, how can I help you?"); //
@@ -40,8 +40,8 @@ public class BasicLuisDialog : LuisDialog<object>
 	[LuisIntent("givedocumentation")]
 	public async Task givedocumentationIntent(IDialogContext context, LuisResult result)
     {
-        await context.PostAsync($"this is the link to the documentation"); //
-        context.Wait(MessageReceived);
+		await context.PostAsync($"this is the link to the documentation"); //
+		context.Wait(MessageReceived);
     }
     
 }
