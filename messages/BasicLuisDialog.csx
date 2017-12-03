@@ -37,8 +37,8 @@ public class BasicLuisDialog : LuisDialog<object>
         context.Wait(MessageReceived);
     }
 
- [LuisIntent("givedocumentation")]
-    public async Task givedocumentationIntent(IDialogContext context, LuisResult result)
+	[LuisIntent("givedocumentation")]
+	public async Task givedocumentationIntent(IDialogContext context, LuisResult result)
     {
         await context.PostAsync($"this is the link to the documentation"); //
         context.Wait(MessageReceived);
